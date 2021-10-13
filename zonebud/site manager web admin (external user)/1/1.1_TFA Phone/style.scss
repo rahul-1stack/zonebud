@@ -1,0 +1,92 @@
+$light-background: #f2efea;
+$blue-color: #2f47a2;
+$orange-color: #ee8224;
+.half-lined {
+	span {
+		padding-bottom: 10px;
+		display: inline-block;
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 70%;
+			height: 4px;
+			border-radius: 4px;
+			background-color: $blue-color;
+		}
+	}
+}
+.transparent-button {
+	display: inline-block;
+	padding: 10px 25px;
+	border: 1px solid #000000;
+	background-color: transparent;
+	border-radius: 6px;
+	color: #000000;
+	text-decoration: none;
+	cursor: pointer;
+	&:hover {
+		text-decoration: none;
+		background-color: $blue-color;
+		color: #ffffff;
+	}
+}
+.orange-btn {
+	background-color: $orange-color;
+	color: #ffffff;
+}
+.login-section {
+	min-height: auto;
+	height: 100vh;
+	.row {
+		.col-5 {
+			background-color: $light-background;
+			img {
+				width: 200px;
+			}
+		}
+		.col-7 {
+			.login-screen {
+				background-color: #f8f8f8;
+				border-radius: 20px;
+				form {
+					input:not([type="checkbox"]):not([type="submit"]):not([type="radio"]) {
+						display: block;
+						width: 100%;
+						border: 0;
+						outline: 0;
+						background-color: #ffffff;
+						border-radius: 4px;
+						padding: 10px 20px;
+						&[name^="otp"] {
+							padding: 10px;
+							width: 50px;
+							height: 50px;
+							background-color: #e1e1e1;
+							text-align: center;
+						}
+					}
+					input[type="checkbox"] {
+						width: 20px;
+						height: 20px;
+					}
+					input[type="submit"] {
+						width: 100%;
+						display: block;
+						border: 0;
+						outline: 0;
+						font-weight: bold;
+						border-radius: 6px;
+						padding: 10px 20px;
+					}
+					a {
+						text-decoration: underline;
+						color: #000000;
+					}
+				}
+			}
+		}
+	}
+}
